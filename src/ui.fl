@@ -1,0 +1,45 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0400
+header_name {.h}
+code_name {.cxx}
+class UserInterface {open
+} {
+  Function {make_window()} {open
+  } {
+    Fl_Window main_window {open
+      xywh {780 299 315 205} type Double visible
+    } {
+      Fl_Button btn01 {
+        label click
+        xywh {35 125 64 20}
+      }
+      Fl_Input input01 {
+        xywh {25 33 265 39} labeltype NO_LABEL
+      }
+      Fl_Box outputbox {
+        xywh {25 81 265 31}
+      }
+      Fl_Box {} {
+        label {Name:}
+        xywh {25 4 45 23}
+      }
+      Fl_Box pic01 {
+        xywh {160 128 125 57} box FLAT_BOX
+      }
+    }
+  }
+}
+
+class PicWindow {open
+} {
+  Function {make_window()} {open
+  } {
+    Fl_Window win {open
+      xywh {829 289 205 129} type Double box THIN_UP_BOX non_modal noborder visible
+    } {
+      Fl_Box pic {
+        xywh {0 0 205 130} box THIN_UP_BOX hotspot
+      }
+    }
+  }
+}
